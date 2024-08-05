@@ -117,7 +117,15 @@ media(numero1, numero2, numero3);*/
     let imc = peso / (altura * altura);
   }*/
 
-    let listaGenerica = [];
+  /*  let listaGenerica = [];
     let linguagensProgramacao = ['Javascript', 'C', 'C++', 'Kotlin', 'Python'];
     linguagensProgramacao.push('Java', 'Ruby', 'GoLang');
-    console.log(linguagensProgramacao);
+    console.log(linguagensProgramacao);*/
+
+    function ordenarNumeros(a, b, c) {
+        const numerosOrdenados = [a, b, c].sort((x, y) => x - y);
+        console.log(`Números ordenados: ${numerosOrdenados.join(', ')}`);
+    }
+    
+    // Exemplo de uso:
+    ordenarNumeros(3, 1, 5); // Deve exibir "Números ordenados: 1, 3, 5"
