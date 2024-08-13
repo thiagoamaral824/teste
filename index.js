@@ -122,10 +122,49 @@ media(numero1, numero2, numero3);*/
     linguagensProgramacao.push('Java', 'Ruby', 'GoLang');
     console.log(linguagensProgramacao);*/
 
-    function ordenarNumeros(a, b, c) {
+/*    function ordenarNumeros(a, b, c) {
         const numerosOrdenados = [a, b, c].sort((x, y) => x - y);
         console.log(`Números ordenados: ${numerosOrdenados.join(', ')}`);
     }
     
     // Exemplo de uso:
-    ordenarNumeros(3, 1, 5); // Deve exibir "Números ordenados: 1, 3, 5"
+    ordenarNumeros(3, 1, 5); // Deve exibir "Números ordenados: 1, 3, 5"*/
+
+    // Declarando uma variável do tipo array
+let minhaLista = [];
+
+// Adicionando elementos com push
+minhaLista.push(1, 2, 3);
+console.log("Adicionando elementos:", minhaLista);
+
+// Criando uma nova variável
+let outrosNumeros = [4, 5, 6];
+
+// Concatenando arrays
+let novaLista = minhaLista.concat(outrosNumeros);
+console.log("Juntando Arrays:", novaLista);
+
+novaLista.pop();
+console.log("Desafio 4:", novaLista);
+
+function embaralharArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+  
+  // Embaralhando novaLista
+  novaLista = embaralharArray(novaLista);
+  console.log("Embaralhando a Lista:", novaLista);
+
+  
+// Função para remover duplicatas de um array
+function removerDuplicatas(array) {
+    return [...new Set(array)];
+  }
+  
+  // Testando a função com novaLista
+  let novaListaSemDuplicatas = removerDuplicatas(novaLista);
+  console.log("Remover duplicatas:", novaListaSemDuplicatas);
